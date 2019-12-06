@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="abs-center">
+<div class="container form">
+  <h3 style= color:white>Ingrese nombre de usuario :D </h3>
+  <form action="/signin" method="POST">
+      <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" autofocus aria-describedby="userHelp" required>
+      </div>
+      <button class="btn btn-info btn-lg" type="submit">Ingresar</button>
+  </form>
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

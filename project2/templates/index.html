@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flack Chat
+{% endblock %}
+
+{% block content %}
+<div class="abs-center">
+  <div class="container form">
+    <h3 style= color:white>Crear un canal</h3>
+    <form action="/create" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" name="channel" id="channel" autofocus required>
+        </div>
+        <button class="btn btn-info btn-lg" type="submit">Crear</button>
+    </form>
+
+  </div>
+
+</div>
+
+
+  <script>
+
+        if (localStorage.getItem('last_channel')) {
+            let channel = localStorage.getItem('last_channel');
+            window.location.replace('/channels/' + channel);
+        }
+
+    </script>
+{% endblock %}
